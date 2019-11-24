@@ -19,8 +19,8 @@ function Dashboard(props) {
         <div className="dashboard">
             <div className="header">
                 <div className="container">
+                    <input type="text" placeholder="Search" onChange={handler} />
                     <div className="header-nav">
-                        <input type="text" placeholder="Search" onChange={handler} />
                         <button onClick={toggleName}>SortByName</button>
                         <button onClick={toggleMarks}>SortByMarks</button>
                     </div>
