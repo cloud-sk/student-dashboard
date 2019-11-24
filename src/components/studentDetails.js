@@ -2,10 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 
-function StudentDetails(props){
+
+function StudentDetails({student = {}}){
     return(
         <div>
-            StudentDetails Page
+            {student.name}
         </div>
     )
 }

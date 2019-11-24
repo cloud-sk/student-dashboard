@@ -33,3 +33,4 @@ export const toggleData = (param) =>  async (dispatch, getState) => {
     dispatch({ type: actions.TOGGLE_NAME, param })
 }
 
+

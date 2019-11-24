@@ -54,6 +54,9 @@ const reducer = (state = initialState, action) => {
                        studentResults: sortResult,
                        sortOder: newOrder
                    };
+
+                   
+                  
         default: return state;
     }
 }
