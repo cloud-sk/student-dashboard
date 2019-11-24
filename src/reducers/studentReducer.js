@@ -23,11 +23,14 @@ const reducer = (state = initialState, action) => {
                 });
             return {
                 ...state,
+                originalResults: array,
                 studentResults: array
             };
             case SEARCH_REQUEST: 
-                let originalData = Object.assign([], state.studentResults);
-                 let searchResult = originalData.filter((e) => e.name === action.input) ;
+                let originalData = Object.assign([], state.originalResults);
+                 let searchResult = originalData.filter((e) => {
+                     return !action.input ? true: e.name.toUpperCase().search(action.input.toUpperCase()) !== -1 
+                 })
                  return {
                     ...state,
                     studentResults: searchResult
