@@ -6,7 +6,7 @@ import Login from '../components/login'
 function LoginContainer(props){
     return(
         <div>
-            <Login />
+            <Login {...props}/>
         </div>
     )
 }

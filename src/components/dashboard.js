@@ -7,7 +7,7 @@ import '../styles/dashboard.scss'
 function Dashboard(props) {
     const { studentResults } = props;
     function handler(e) {
-            props.submitSearch(e.target.value)
+        props.submitSearch(e.target.value)
     }
     function toggleName() {
         props.toggleData('name');
@@ -18,10 +18,12 @@ function Dashboard(props) {
     return (
         <div className="dashboard">
             <div className="header">
-                <div>
-                    <input type="text" placeholder="Search" onChange={handler} />
-                    <button onClick={toggleName}>SortByName</button>
-                    <button onClick={toggleMarks}>SortByMarks</button>
+                <div className="container">
+                    <div className="header-nav">
+                        <input type="text" placeholder="Search" onChange={handler} />
+                        <button onClick={toggleName}>SortByName</button>
+                        <button onClick={toggleMarks}>SortByMarks</button>
+                    </div>
                 </div>
             </div>
             <div className="student-details">

@@ -10,8 +10,8 @@ function App(props){
     return(
         <Router>
             <Switch>
-                <Route exact path= '/' component={DashbordPage}></Route>
-                <Route path= '/login' component={LoginPage}></Route>
+                <Route exact path= '/' component={LoginPage}></Route>
+                <Route path= '/dashboard' component={DashbordPage}></Route>
                 <Route path= '/:id' component={StudentPage}></Route>
             </Switch>
         </Router>
