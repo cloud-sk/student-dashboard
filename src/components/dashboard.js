@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import '../styles/dashboard.scss'
 
 
@@ -27,11 +28,14 @@ function Dashboard(props){
             {studentResults && studentResults.length ?
                 studentResults.map((value) => {
                     return (
-                        <div key={value} className="card">
+                        <Link to={`/${value.rollNo}`}>
+                            <div key={value} className="card">
                               <p> Name: {value.name}</p>
                               <p> Total Marks: {value.total}</p>
                               <p>Roll No: {value.rollNo}</p>
                         </div>
+                        </Link>
+                        
                     )
                 })
                 : null
